@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".view.MainActivity">
+
+<Button
+    android:id="@+id/BotaoLogin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="LOGIN"
+    app:layout_constraintTop_toTopOf="parent"/>
+<!--    aponta para catch date onde se filtram as datas da reserva. Possível fazer na mesma tela? -->
+
+    <Button
+        android:id="@+id/BotaoCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CADASTRO"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+<!--    aponta para tela de cadastro de novo usuário com forms pedindo as datas pra inicializar o objeto. Problemas com dataas-->
+
+
+
+<!--<ListView-->
+<!--    android:id="@+id/listView"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="0dp"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/BotaoCadastro"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
