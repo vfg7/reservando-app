@@ -7,6 +7,7 @@ public class Guest {
     private long id;
     private String name;
     private String password;
+    private String email;
     private long phone;
     private LocalDate birthday;
     private Profile profile;
@@ -15,9 +16,10 @@ public class Guest {
         super();
     }
 
-    public Guest(long id, String name, String password, long phone, LocalDate birthday, Profile profile) {
+    public Guest(long id, String name, String email, String password, long phone, LocalDate birthday, Profile profile) {
         this.id = id;
         this.name = name;
+        this.email = email;
         this.password = password;
         this.phone = phone;
         this.birthday = birthday;
@@ -74,4 +76,13 @@ public class Guest {
     public void setProfile(Profile profile) {
         this.profile = profile;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
 }

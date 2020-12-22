@@ -1,8 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-<!--    elemento de form?-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/newuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:text="Novo Usuário"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/newuser"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/guestname"
+        android:textSize="15sp"
+        android:text="nome completo"
+
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guestname"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/guestmail"
+        android:textSize="15sp"
+        android:text="email"
+
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guestmail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/guestphone"
+        android:textSize="15sp"
+        android:text="telefone"
+
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guestphone"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/guestbday"
+        android:textSize="15sp"
+        android:text="niversauro"
+
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guestbday"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/guestprofile"
+        android:textSize="15sp"
+        android:text="perfil"
+
+        />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guestprofile"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/guestpassword"
+        android:textSize="15sp"
+        android:text="senha"
+
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/to2"
+        android:text="ESCOLHA SUA ESTADIA! "
+        app:layout_constraintTop_toBottomOf="@id/guestpassword"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/tomain"
+        android:text="VOLTAR"
+        app:layout_constraintTop_toBottomOf="@id/to2"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
