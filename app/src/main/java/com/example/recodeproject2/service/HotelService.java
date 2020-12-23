@@ -11,6 +11,7 @@ import retrofit2.http.POST;
 
 public interface HotelService {
 
+    //http://10.0.2.2:8080/hotel
     @GET("hotel")
     Call<List<Hotel>> getAllhotels();
 

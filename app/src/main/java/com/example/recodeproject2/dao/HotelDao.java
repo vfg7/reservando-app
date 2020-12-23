@@ -9,6 +9,7 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
+@Dao
 public interface HotelDao {
 
     @Query("SELECT * FROM Hotel")

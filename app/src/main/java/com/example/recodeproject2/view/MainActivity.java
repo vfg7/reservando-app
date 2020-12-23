@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        ListView listView = findViewById(R.id.listView);
+        ListView listView = findViewById(R.id.listView_cad);
 
 
         listaHotel = new ArrayList<>();

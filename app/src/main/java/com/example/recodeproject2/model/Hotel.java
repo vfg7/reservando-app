@@ -1,9 +1,13 @@
 package com.example.recodeproject2.model;
 
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity
 public class Hotel {
 
+    @PrimaryKey
     private long id;
     private String name;
     private String email;

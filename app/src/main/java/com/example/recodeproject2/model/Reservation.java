@@ -1,8 +1,13 @@
 package com.example.recodeproject2.model;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.time.LocalDate;
 
+@Entity
 public class Reservation {
+    @PrimaryKey
     private long id;
     private long value;
     private LocalDate checkin;

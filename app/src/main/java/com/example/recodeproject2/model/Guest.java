@@ -1,9 +1,14 @@
 package com.example.recodeproject2.model;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.time.LocalDate;
 
+@Entity
 public class Guest {
 
+    @PrimaryKey
     private long id;
     private String name;
     private String password;
