@@ -22,6 +22,8 @@ public class DateSelect  extends AppCompatActivity {
         setContentView(R.layout.dateselect);
 
         //getDatas
+        inpicker = (DatePicker)findViewById(R.id.checkin);
+        outpicker=(DatePicker)findViewById(R.id.checkout);
         //set texts
         checkin = findViewById(R.id.getcheckin);
         checkin.setOnClickListener(new View.OnClickListener() {

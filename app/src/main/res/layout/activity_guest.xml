@@ -60,7 +60,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/guestbday"
         android:textSize="15sp"
-        android:text="niversauro"
+        android:text="data de nascimento"
 
         />
 
@@ -74,6 +74,39 @@
         android:text="perfil"
 
         />
+
+    <RadioGroup
+        android:id="@+id/radioProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guestbday"
+        app:layout_constraintStart_toEndOf="@id/guestprofile"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGULAR [GRATIS]"
+            android:textSize="10dp"
+            android:checked="true"
+            android:onClick="onRadioButtonClicked"
+
+            />
+
+        <RadioButton
+            android:id="@+id/fidelidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FIDELIDADE [$]"
+            android:textSize="10dp"
+            android:onClick="onRadioButtonClicked"
+
+
+            />
+
+    </RadioGroup>
 
 
     <EditText
@@ -90,15 +123,22 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toHotel"
-        android:text="ESCOLHA SUA ESTADIA! "
+        android:id="@+id/confirma"
+        android:text="FINALIZAR CADASTRO "
         app:layout_constraintTop_toBottomOf="@id/guestpassword"
         />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/toHotel"
+        android:text="ESCOLHA SUA ESTADIA! "
+        app:layout_constraintTop_toBottomOf="@id/confirma"
+        />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/toMain"
         android:text="VOLTAR"
         app:layout_constraintTop_toBottomOf="@id/toHotel"

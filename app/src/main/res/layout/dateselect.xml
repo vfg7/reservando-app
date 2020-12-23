@@ -37,9 +37,18 @@
 
         />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/checkintext"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="selecione data"
+        android:id="@+id/checkinselect"
+        />
+
     <DatePicker android:id="@+id/checkin"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/checkintext"
         android:layout_margin="20dp"
         android:padding="20dp"
@@ -72,9 +81,19 @@
 
         />
 
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/checkouttext"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="selecione data"
+        android:id="@+id/checkoutselect"
+        />
+
     <DatePicker android:id="@+id/checkout"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/checkouttext"
         android:layout_margin="20dp"
         android:padding="20dp"
