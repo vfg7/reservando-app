@@ -10,12 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecodeProject2">
         <activity android:name=".view.MainActivity">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".view.Success"/>
+        <activity android:name=".view.DateSelect"/>
+        <activity android:name=".view.GuestActivity"/>
+        <activity android:name=".view.Login"/>
+        <activity android:name=".view.HotelActivity"/>
+
     </application>
 
 </manifest>

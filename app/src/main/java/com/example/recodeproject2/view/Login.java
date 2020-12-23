@@ -10,23 +10,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.recodeproject2.R;
 
-public class Success extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.success);
+        setContentView(R.layout.login);
 
-        Button volta = (Button) findViewById(R.id.retorne);
-        volta.setOnClickListener(new View.OnClickListener() {
+        Button loginButton = (Button) findViewById(R.id.entrar);
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Success.this, MainActivity.class);
+                Intent intent = new Intent(Login.this, DateSelect.class);
                 startActivity(intent);
             }
         });
 
-        //preciso pegar daqui o usuário (novo ou gerado), datas, hotel e criar a reserva
+        //essa classe precisa fazer uma requisição e buscar um usuário no banco. Como faço?
+
 
     }
 }
+
+

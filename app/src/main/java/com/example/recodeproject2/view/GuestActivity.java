@@ -23,23 +23,22 @@ public class GuestActivity extends AppCompatActivity {
         //avança pra selecionar hoteis
         goHotel = (Button) findViewById(R.id.toHotel);
         goHotel.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-                Intent intent = new Intent();
-                setResult(RESULT_OK, intent);
-                finish();
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GuestActivity.this, HotelActivity.class);
+                startActivity(intent);
             }
-
         });
 
-        //volta pra main
-        back = (Button) findViewById(R.id.tomain);
-        back.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
-                startActivityForResult(myIntent, 0);
-            }
 
+        //volta pra main
+        back = (Button) findViewById(R.id.toMain);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GuestActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
         });
 
 

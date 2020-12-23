@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/welcomeback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:text="BEM VINDO DE VOLTA"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/welcomeback"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/username"
+        android:textSize="15sp"
+        android:text="USUARIO"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp"
+
+        />
+    <!--        android:layout_marginLeft="100dp"-->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/password"
+        android:textSize="15sp"
+        android:text="SENHA"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <Button
+        android:id="@+id/entrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="entrar"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:layout_marginTop="200dp"
+
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
