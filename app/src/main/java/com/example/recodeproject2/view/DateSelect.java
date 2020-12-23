@@ -49,25 +49,24 @@ public class DateSelect  extends AppCompatActivity {
         //implementar idas e voltas
 
         //volta pra home
-//        back = (Button) findViewById(R.id.tomain);
-//        back.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View view) {
-//                Intent intent = new Intent();
-//                setResult(RESULT_OK, intent);
-//                finish();
-//            }
-//
-//        });
+        back = (Button) findViewById(R.id.tomain);
+        back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(DateSelect.this, MainActivity.class);
+                startActivity(intent);
+            }
+
+        });
 //
 //        //segue para escolha do hotel
-//        next = (Button) findViewById(R.id.to3);
-//        next.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View view) {
-//                Intent myIntent = new Intent(view.getContext(), HotelActivity.class);
-//                startActivityForResult(myIntent, 0);
-//            }
-//
-//        });
+        next = (Button) findViewById(R.id.tohotelist);
+        next.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(DateSelect.this, HotelActivity.class);
+               startActivity(intent);
+            }
+
+        });
 
 
     }//oncreate

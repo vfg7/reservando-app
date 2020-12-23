@@ -16,6 +16,7 @@
         android:layout_marginTop="16dp"
         android:padding="10dp"
         android:text="Selecione datas da reserva"
+        android:textSize="20dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
@@ -107,7 +108,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/to3"
+        android:id="@+id/tohotelist"
         android:text="ESCOLHA O HOTEL!"
         app:layout_constraintTop_toTopOf="@id/tomain"
         app:layout_constraintStart_toEndOf="@id/tomain"

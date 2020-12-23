@@ -48,7 +48,7 @@ public class HotelAdapter extends ArrayAdapter<Hotel> {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, HotelActivity.class);
+                Intent intent = new Intent(context, Success.class);
                 context.startActivity(intent);
             }
         });

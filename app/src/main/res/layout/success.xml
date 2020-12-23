@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:id="@+id/success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="RESERVA FEITA COM SUCESSO!"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+         />
+
+    <TextView
+        android:id="@+id/notify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="arial"
+        android:text="informações de pagamento encaminhadadas para o email cadastrado!"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/success"
+        android:textSize="30sp"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/black"
+        />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/bgtext"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--       -->
+<!--        -->
+<!--        />-->
+
+
+    <Button
+        android:id="@+id/retorne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FAZER NOVA RESERVA?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="180dp"
+
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
