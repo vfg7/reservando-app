@@ -28,10 +28,7 @@ import retrofit2.Response;
 
 //busca e retorno de hoteis
 public class HotelActivity extends AppCompatActivity {
-//
-//    private RecyclerView recyclerView;
-//    private RecyclerView.Adapter mAdapter;
-//    private RecyclerView.LayoutManager layoutManager;
+
 
     ArrayList<Hotel> listaHotel;
     private ArrayAdapter gerenciador;
@@ -51,6 +48,7 @@ public class HotelActivity extends AppCompatActivity {
 
 
         RetroConfig retrofitConfig = new RetroConfig();
+
         Call<List<Hotel>> call = retrofitConfig.getHotelService().getAllhotels();
 
         call.enqueue(new Callback<List<Hotel>>() {

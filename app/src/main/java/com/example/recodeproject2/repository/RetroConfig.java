@@ -13,19 +13,22 @@ public class RetroConfig {
 
     public RetroConfig() {
         this.retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:8080/") //lembrar de colocar o servidor aqui. Tirar dúvida do heroku.
+                .baseUrl("http://192.168.0.16:8080/") //lembrar de colocar o servidor aqui. Tirar dúvida do heroku.
                 .addConverterFactory(JacksonConverterFactory.create())
                 .build();
     }
 
     //importar as classes .service
     public GuestService getGuestService(){
+
         return retrofit.create(GuestService.class);
     }
+
     public ReservationService getReservationService(){
         return retrofit.create(ReservationService.class);
     }
     public HotelService getHotelService(){
+
         return retrofit.create(HotelService.class);
     }
 

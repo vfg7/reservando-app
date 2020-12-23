@@ -76,22 +76,21 @@ public class Login extends AppCompatActivity {
 
         EditText text2 = (EditText)findViewById(R.id.password);
         String password = text2.getText().toString();
-
-        //o loop tá retornando um erro e não entendo pq
-
-//        int i;
-//        for (i=0, i<users.size(),i++){
-//            if(users.get(i).getEmail().equals(username)){
-//                if(users.get(i).getPassword().equals(password)){
-//                    Toast.makeText(Login.this, "login feito com sucesso!", Toast.LENGTH_LONG).show();
-//                    token = true;
-//                } else{
-//                    Toast.makeText(Login.this, "senha errada!", Toast.LENGTH_LONG).show();
-//                }
-//            } else {
-//                Toast.makeText(Login.this, "usuário inexistente!", Toast.LENGTH_LONG).show();
-//            }
-//        }
+        Guest current = new Guest();
+        int i;
+        for (i=0; i<users.size(); i++){
+            if(users.get(i).getEmail().equals(username)){
+                if(users.get(i).getPassword().equals(password)){
+                    Toast.makeText(Login.this, "login feito com sucesso!", Toast.LENGTH_LONG).show();
+                    token = true;
+                    current = users.get(i);
+                } else{
+                    Toast.makeText(Login.this, "senha errada!", Toast.LENGTH_LONG).show();
+                }
+            } else if(i==users.size()-1) {
+                Toast.makeText(Login.this, "usuário inexistente!", Toast.LENGTH_LONG).show();
+            }
+        }
 
 
 

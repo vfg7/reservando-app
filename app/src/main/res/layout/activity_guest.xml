@@ -6,6 +6,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+
     <TextView
         android:id="@+id/newuser"
         android:layout_width="wrap_content"
@@ -29,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/guestname"
         android:textSize="15sp"
-        android:text="nome completo"
+        android:hint="nome completo"
 
         />
     <EditText
@@ -39,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/guestmail"
         android:textSize="15sp"
-        android:text="email"
+        android:hint="email"
 
         />
     <EditText
@@ -49,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/guestphone"
         android:textSize="15sp"
-        android:text="telefone"
+        android:hint="telefone"
 
         />
 
@@ -60,7 +62,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/guestbday"
         android:textSize="15sp"
-        android:text="data de nascimento"
+        android:hint="data de nascimento"
 
         />
 
@@ -71,7 +73,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/guestprofile"
         android:textSize="15sp"
-        android:text="perfil"
+        android:hint="perfil"
 
         />
 
@@ -91,7 +93,6 @@
             android:text="REGULAR [GRATIS]"
             android:textSize="10dp"
             android:checked="true"
-            android:onClick="onRadioButtonClicked"
 
             />
 
@@ -101,8 +102,6 @@
             android:layout_height="wrap_content"
             android:text="FIDELIDADE [$]"
             android:textSize="10dp"
-            android:onClick="onRadioButtonClicked"
-
 
             />
 
@@ -116,7 +115,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/guestpassword"
         android:textSize="15sp"
-        android:text="senha"
+        android:hint="senha"
 
         />
 
@@ -143,7 +142,6 @@
         android:text="VOLTAR"
         app:layout_constraintTop_toBottomOf="@id/toHotel"
         />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

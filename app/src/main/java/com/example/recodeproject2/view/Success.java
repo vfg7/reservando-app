@@ -9,6 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.recodeproject2.R;
+import com.example.recodeproject2.model.Reservation;
+import com.example.recodeproject2.repository.RetroConfig;
 
 public class Success extends AppCompatActivity {
 
@@ -26,7 +28,11 @@ public class Success extends AppCompatActivity {
             }
         });
 
-        //preciso pegar daqui o usuário (novo ou gerado), datas, hotel e criar a reserva
+        Reservation newRes = new Reservation();
+        RetroConfig retrofitConfig = new RetroConfig();
+        retrofitConfig.getReservationService().insert(newRes);
+
+        //passar info via telas.
 
     }
 }

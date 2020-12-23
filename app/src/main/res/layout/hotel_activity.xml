@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".view.HotelActivity">
 
+
     //classe pra mostrar a lista de hoteis e poder selecionar seu hotel de preferência para a reserva
 
     <ListView
@@ -15,5 +16,7 @@
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

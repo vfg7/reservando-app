@@ -2,6 +2,7 @@ package com.example.recodeproject2.model;
 
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity
@@ -11,7 +12,7 @@ public class Hotel {
     private long id;
     private String name;
     private String email;
-    private long phone;
+    private long telephone;
     private long classification;
     private long weekdayRegular;
     private long weekdayFidelity;
@@ -23,12 +24,13 @@ public class Hotel {
         super();
     }
 
-    public Hotel(long id, String name, String email, long phone, long classification, long weekdayRegular,
+    @Ignore
+    public Hotel(long id, String name, String email, long telephone, long classification, long weekdayRegular,
                  long weekdayFidelity, long weekendRegular, long weekendFidelity) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.phone = phone;
+        this.telephone = telephone;
         this.classification = classification;
         this.weekdayRegular = weekdayRegular;
         this.weekdayFidelity = weekdayFidelity;
@@ -60,12 +62,12 @@ public class Hotel {
         this.email = email;
     }
 
-    public long getPhone() {
-        return phone;
+    public long getTelephone() {
+        return telephone;
     }
 
-    public void setPhone(long phone) {
-        this.phone = phone;
+    public void setTelephone(long telephone) {
+        this.telephone = telephone;
     }
 
     public long getWeekdayRegular() {

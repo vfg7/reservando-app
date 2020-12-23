@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +16,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.recodeproject2.R;
 import com.example.recodeproject2.model.Guest;
 
-import java.time.LocalDate;
+import com.example.recodeproject2.repository.RetroConfig;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 //classe em que o usuário se cadastra
 public class GuestActivity extends AppCompatActivity {
@@ -67,16 +75,56 @@ public class GuestActivity extends AppCompatActivity {
 
 
         Guest newGuest = new Guest();
+        newGuest.setId(0);
         newGuest.setName(username);
         newGuest.setEmail(mail);
-        newGuest.setBirthday(LocalDate.parse(bday));
-        newGuest.setPhone(phone);
+        newGuest.setBirthday(bday);
+        newGuest.setTelephone(phone);
         newGuest.setPassword(pass);
         if(c){
             newGuest.setProfile(Guest.Profile.REGULAR);
+            newGuest.setFidelity(false);
+            newGuest.setRegular(true);
+
         } else {
             newGuest.setProfile(Guest.Profile.FIDELITY);
+            newGuest.setFidelity(true);
+            newGuest.setRegular(false);
         }
+
+        RetroConfig retrofitConfig = new RetroConfig();
+       retrofitConfig.getGuestService().insert(newGuest);
+
+        Call<List<Guest>> call = retrofitConfig.getGuestService().getAllGuests();
+        ArrayList<Guest> listaGuest = new ArrayList<>();
+
+        call.enqueue(new Callback<List<Guest>>() {
+            @Override
+            public void onResponse(Call<List<Guest>> call, Response<List<Guest>> response) {
+                List<Guest> guests = response.body();
+
+                ArrayList<Guest> novalista = new ArrayList<>(guests);
+                listaGuest.addAll(novalista);
+            }
+
+            @Override
+            public void onFailure(Call<List<Guest>> call, Throwable t) {
+                Toast.makeText(GuestActivity.this, "Sua request falhou!", Toast.LENGTH_LONG).show();
+            }
+        });
+       boolean sucesso=false;
+
+        for (int i=0; i<listaGuest.size(); i++){
+            if(listaGuest.get(i).equals(newGuest)){
+                sucesso = true;
+            }
+        }
+
+        if(!sucesso){
+            Toast.makeText(GuestActivity.this, "Cadastro falhou!", Toast.LENGTH_LONG).show();
+        }
+       
+       
 
 
     }
