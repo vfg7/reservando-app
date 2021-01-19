@@ -28,9 +28,9 @@ public class Success extends AppCompatActivity {
             }
         });
 
-        Reservation newRes = new Reservation();
-        RetroConfig retrofitConfig = new RetroConfig();
-        retrofitConfig.getReservationService().insert(newRes);
+//        Reservation newRes = new Reservation();
+//        RetroConfig retrofitConfig = new RetroConfig();
+//        retrofitConfig.getReservationService().insert(newRes);
 
         //passar info via telas.
 

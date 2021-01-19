@@ -57,73 +57,73 @@ public class GuestActivity extends AppCompatActivity {
             }
         });
 
-        EditText t1 = (EditText)findViewById(R.id.guestname);
-        String username = t1.getText().toString();
-        EditText t2= (EditText)findViewById(R.id.guestmail);
-        String mail = t2.getText().toString();
-        EditText t3= (EditText)findViewById(R.id.guestphone);
-        String p = t3.getText().toString();
-        Long phone = Long.parseLong(p);
-
-        EditText t4= (EditText)findViewById(R.id.guestpassword);
-        String pass = t4.getText().toString();
-        EditText t5= (EditText)findViewById(R.id.guestbday);
-        String bday = t5.getText().toString();
-
-        RadioButton b = (RadioButton)findViewById(R.id.regular);
-        boolean c = b.isChecked();
-
-
-        Guest newGuest = new Guest();
-        newGuest.setId(0);
-        newGuest.setName(username);
-        newGuest.setEmail(mail);
-        newGuest.setBirthday(bday);
-        newGuest.setTelephone(phone);
-        newGuest.setPassword(pass);
-        if(c){
-            newGuest.setProfile(Guest.Profile.REGULAR);
-            newGuest.setFidelity(false);
-            newGuest.setRegular(true);
-
-        } else {
-            newGuest.setProfile(Guest.Profile.FIDELITY);
-            newGuest.setFidelity(true);
-            newGuest.setRegular(false);
-        }
-
-        RetroConfig retrofitConfig = new RetroConfig();
-       retrofitConfig.getGuestService().insert(newGuest);
-
-        Call<List<Guest>> call = retrofitConfig.getGuestService().getAllGuests();
-        ArrayList<Guest> listaGuest = new ArrayList<>();
-
-        call.enqueue(new Callback<List<Guest>>() {
-            @Override
-            public void onResponse(Call<List<Guest>> call, Response<List<Guest>> response) {
-                List<Guest> guests = response.body();
-
-                ArrayList<Guest> novalista = new ArrayList<>(guests);
-                listaGuest.addAll(novalista);
-            }
-
-            @Override
-            public void onFailure(Call<List<Guest>> call, Throwable t) {
-                Toast.makeText(GuestActivity.this, "Sua request falhou!", Toast.LENGTH_LONG).show();
-            }
-        });
-       boolean sucesso=false;
-
-        for (int i=0; i<listaGuest.size(); i++){
-            if(listaGuest.get(i).equals(newGuest)){
-                sucesso = true;
-            }
-        }
-
-        if(!sucesso){
-            Toast.makeText(GuestActivity.this, "Cadastro falhou!", Toast.LENGTH_LONG).show();
-        }
-       
+//        EditText t1 = (EditText)findViewById(R.id.guestname);
+//        String username = t1.getText().toString();
+//        EditText t2= (EditText)findViewById(R.id.guestmail);
+//        String mail = t2.getText().toString();
+//        EditText t3= (EditText)findViewById(R.id.guestphone);
+//        String p = t3.getText().toString();
+//        Long phone = Long.parseLong(p);
+//
+//        EditText t4= (EditText)findViewById(R.id.guestpassword);
+//        String pass = t4.getText().toString();
+//        EditText t5= (EditText)findViewById(R.id.guestbday);
+//        String bday = t5.getText().toString();
+//
+//        RadioButton b = (RadioButton)findViewById(R.id.regular);
+//        boolean c = b.isChecked();
+//
+//
+//        Guest newGuest = new Guest();
+//        newGuest.setId(0);
+//        newGuest.setName(username);
+//        newGuest.setEmail(mail);
+//        newGuest.setBirthday(bday);
+//        newGuest.setTelephone(phone);
+//        newGuest.setPassword(pass);
+//        if(c){
+//            newGuest.setProfile(Guest.Profile.REGULAR);
+//            newGuest.setFidelity(false);
+//            newGuest.setRegular(true);
+//
+//        } else {
+//            newGuest.setProfile(Guest.Profile.FIDELITY);
+//            newGuest.setFidelity(true);
+//            newGuest.setRegular(false);
+//        }
+//
+//        RetroConfig retrofitConfig = new RetroConfig();
+//       retrofitConfig.getGuestService().insert(newGuest);
+//
+//        Call<List<Guest>> call = retrofitConfig.getGuestService().getAllGuests();
+//        ArrayList<Guest> listaGuest = new ArrayList<>();
+//
+//        call.enqueue(new Callback<List<Guest>>() {
+//            @Override
+//            public void onResponse(Call<List<Guest>> call, Response<List<Guest>> response) {
+//                List<Guest> guests = response.body();
+//
+//                ArrayList<Guest> novalista = new ArrayList<>(guests);
+//                listaGuest.addAll(novalista);
+//            }
+//
+//            @Override
+//            public void onFailure(Call<List<Guest>> call, Throwable t) {
+//                Toast.makeText(GuestActivity.this, "Sua request falhou!", Toast.LENGTH_LONG).show();
+//            }
+//        });
+//       boolean sucesso=false;
+//
+//        for (int i=0; i<listaGuest.size(); i++){
+//            if(listaGuest.get(i).equals(newGuest)){
+//                sucesso = true;
+//            }
+//        }
+//
+//        if(!sucesso){
+//            Toast.makeText(GuestActivity.this, "Cadastro falhou!", Toast.LENGTH_LONG).show();
+//        }
+//
        
 
 

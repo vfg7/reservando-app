@@ -36,45 +36,45 @@ public class HotelAdapter extends ArrayAdapter<Hotel> {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
 
-    public void calculateValue(String checkin, String checkout, Guest guest, Hotel hotel, long value) {
-
-
-        LocalDate date = LocalDate.parse(checkin);
-        LocalDate date2 = LocalDate.parse(checkout);
-
-        if(date2.isBefore(date)) {
-            System.out.println("Checkout antes do checkin!");
-            return;
-        }
-
-        long stay = ChronoUnit.DAYS.between(date, date2);
-        long valor = 0L;
-        long weekday=0L;
-        long weekend =0L;
-
-        if(guest.isRegular()) {
-            weekday = hotel.getWeekdayRegular();
-            weekend = hotel.getWeekendRegular();
-        } else if (guest.isFidelity()) {
-            weekday = hotel.getWeekdayFidelity();
-            weekend = hotel.getWeekendFidelity();
-        }
-
-        for (int i=0;i<stay;i++) {
-            DayOfWeek dow = DayOfWeek.from(date);
-            if (dow.toString().equals("SATURDAY")||dow.toString().equals("SUNDAY")) {
-                valor += weekend;
-
-            } else {
-                valor += weekday;
-            }
-            date = date.plusDays(1);
-
-        }
-
-        value=valor;
-
-    }
+//    public void calculateValue(String checkin, String checkout, Guest guest, Hotel hotel, long value) {
+//
+//
+//        LocalDate date = LocalDate.parse(checkin);
+//        LocalDate date2 = LocalDate.parse(checkout);
+//
+//        if(date2.isBefore(date)) {
+//            System.out.println("Checkout antes do checkin!");
+//            return;
+//        }
+//
+//        long stay = ChronoUnit.DAYS.between(date, date2);
+//        long valor = 0L;
+//        long weekday=0L;
+//        long weekend =0L;
+//
+//        if(guest.isRegular()) {
+//            weekday = hotel.getWeekdayRegular();
+//            weekend = hotel.getWeekendRegular();
+//        } else if (guest.isFidelity()) {
+//            weekday = hotel.getWeekdayFidelity();
+//            weekend = hotel.getWeekendFidelity();
+//        }
+//
+//        for (int i=0;i<stay;i++) {
+//            DayOfWeek dow = DayOfWeek.from(date);
+//            if (dow.toString().equals("SATURDAY")||dow.toString().equals("SUNDAY")) {
+//                valor += weekend;
+//
+//            } else {
+//                valor += weekday;
+//            }
+//            date = date.plusDays(1);
+//
+//        }
+//
+//        value=valor;
+//
+//    }
 
     public HotelAdapter(@NonNull Context context, ArrayList<Hotel> hotelList, int layout) {
         super(context, layout, hotelList);
@@ -106,8 +106,8 @@ public class HotelAdapter extends ArrayAdapter<Hotel> {
 //        calculateValue(checkin,checkout,guest,hotel,value);
 
         TextView valor = itemView.findViewById(R.id.value); //setado na view, no xml
-        ;
-        valor.setText("R$ "+Objects.toString(300L));
+
+        valor.setText("R$ 300,00");
 
         Button bt = itemView.findViewById(R.id.bt_open_item);
         bt.setOnClickListener(new View.OnClickListener() {
